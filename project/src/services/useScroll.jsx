@@ -89,7 +89,7 @@ export default function useScroll(selector = "#swiper", timing = 1200, slide = "
 
             if (dx >= 0 && dx <= threshold) {
               if (y1 == null || x1 == null) return;
-              // todo fix below detectScroll(-1)  get invoked by single mouse click 
+              // todo fix below detectScroll(-1)  get invoked by single mouse click
               if (y1 > y2) {
                 // console.log("pointerMove to: down");
                 detectScroll({ deltaY: 1 });
@@ -142,6 +142,10 @@ export default function useScroll(selector = "#swiper", timing = 1200, slide = "
 
     // scroll
     wrapper.style.transform = `translate3d(0px, -${num}00vh, 0px)`;
+
+    const slides = wrapper.querySelectorAll(".slide");
+    slides.forEach(slide => slide.classList.remove("current"));
+    slides[num].classList.add("current");
   };
 
   useEffect(() => {

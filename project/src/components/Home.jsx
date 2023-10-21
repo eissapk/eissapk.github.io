@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`slide ${classes.home}`}>
+    <div className={`slide current ${classes.home}`}>
       <div className={classes["inner-home"]}>
         <Info />
         {((winHeight >= 500 && winWidth >= 769) || winHeight >= 810) && <Image />}
