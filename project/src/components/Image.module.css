@@ -1,0 +1,11 @@
+.image {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid var(--blue-color);
+}
+
+.image img {
+  width: 250px;
+  display: block;
+  pointer-events: none;
+}

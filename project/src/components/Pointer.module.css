@@ -1,0 +1,16 @@
+.pointer {
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform-origin: top left;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  border: 2px solid var(--blue-color);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  z-index: 999;
+}
+.glow {
+  background-color: rgba(109, 87, 221, 0.35);
+}

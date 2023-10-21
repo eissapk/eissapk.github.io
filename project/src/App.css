@@ -1,0 +1,23 @@
+.App {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#swiper {
+  touch-action: pan-y;
+  display: flex;
+  flex-direction: column;
+  transform: translate3d(0px, 0px, 0px);
+  transition-delay: 0ms;
+  transition-property: transform;
+  transition-timing-function: initial;
+  user-select: none;
+  background-color: white;
+}
+
+#swiper >.slide {
+  height: 100vh;
+  background-color: white;
+  padding: 60px 10px;
+  padding-bottom: 40px;
+}

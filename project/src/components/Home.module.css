@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.inner-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+@media (min-width: 769px) {
+  .inner-home {
+    flex-direction: row;
+    align-items: start;
+    gap: 100px;
+  }
+}
