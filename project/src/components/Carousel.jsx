@@ -5,7 +5,7 @@ import classes from "./Carousel.module.css";
 import ArrowLeft from "./Icons/ArrowLeft";
 import ArrowRight from "./Icons/ArrowRight";
 
-export default function Carousel() {
+export default function Carousel({ counter: xCounter, setCounter: setXCounter }) {
   const data = useContext(DataContext);
   const [counter, setCounter] = useState(0);
   const [, setIsDown] = useState(false);
@@ -13,6 +13,13 @@ export default function Carousel() {
   const [, setX] = useState(0);
   const max = data.gallery.length - 1;
   const timing = 400;
+
+  // useEffect(() => {
+  //   console.log("carousel:", xCounter);
+  //   const swiper = document.querySelector("#swiper");
+  //   swiper.style.transform = "none";
+  //   setCounter(1);
+  // }, [xCounter]);
 
   function next() {
     if (counter < max) return setCounter(counter + 1);
@@ -124,12 +131,12 @@ export default function Carousel() {
   // }, []);
 
   // useEffect(() => {
-  //   const work = document.querySelector("#swiper .slide.work");
-  //   const swiper = document.querySelector("#swiper");
-  //   if (work && work.classList.contains("current")) {
-  //     swiper.style.transform = "none";
-  //     console.log("work is current view");
-  //   }
+    // const work = document.querySelector("#swiper .slide.work");
+    // const swiper = document.querySelector("#swiper");
+    // if (work && work.classList.contains("current")) {
+    //   swiper.style.transform = "none";
+    //   console.log("work is current view");
+    // }
   // }, [counter]);
 
   return (

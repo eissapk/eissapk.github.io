@@ -158,5 +158,10 @@ export default function useScroll(selector = "#swiper", timing = 1200, slide = "
     transform(counter);
   }, [counter]);
 
-  return transform;
+  // return transform;
+  return {
+    counter,
+    transform,
+    setCounter: setCounter
+  };
 }

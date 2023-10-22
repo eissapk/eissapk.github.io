@@ -9,15 +9,15 @@ import DataProvider from "./Store/DataProvider";
 
 const timing = 400;
 export default function App() {
-  const transform = useScroll("#swiper", timing, ".slide");
+  const { transform, counter, setCounter } = useScroll("#swiper", timing, ".slide");
 
   return (
     <DataProvider>
       <div className="App">
         <Header transform={transform} />
         <div id="swiper" style={{ transitionDuration: timing * 3 + "ms" }}>
-          <Home />
-          <Work />
+          <Home index={0} />
+          <Work index={1} counter={counter} setCounter={setCounter} />
         </div>
         <Footer />
         <Pointer multiplier={2} />
