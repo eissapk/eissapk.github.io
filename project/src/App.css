@@ -1,6 +1,7 @@
 .App {
   height: 100vh;
   overflow: hidden;
+  background-color: white;
 }
 
 #swiper {
