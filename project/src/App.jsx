@@ -12,9 +12,7 @@ const timing = 400;
 export default function App() {
   const { transform, counter, setCounter } = useScroll("#swiper", timing, ".slide");
   const [winHeight, setWinHeight] = useState(window.innerHeight);
-
   const handleSize = () => setWinHeight(window.innerHeight);
-
   useEffect(() => {
     window.addEventListener("resize", handleSize);
     return () => window.removeEventListener("resize", handleSize);
@@ -25,8 +23,8 @@ export default function App() {
       <div className="App">
         <Header transform={transform} />
         <div id="swiper" style={{ transitionDuration: timing * 3 + "ms" }}>
-          <Home winHeight={winHeight} index={0} />
-          <Work winHeight={winHeight} index={1} counter={counter} setCounter={setCounter} />
+          <Home winHeight={winHeight} />
+          <Work winHeight={winHeight} />
         </div>
         <Footer />
         <Pointer multiplier={2} />

@@ -5,7 +5,7 @@ import classes from "./Carousel.module.css";
 import ArrowLeft from "./Icons/ArrowLeft";
 import ArrowRight from "./Icons/ArrowRight";
 
-export default function Carousel({ counter: xCounter, setCounter: setXCounter }) {
+export default function Carousel() {
   const data = useContext(DataContext);
   const [counter, setCounter] = useState(0);
   const [, setIsDown] = useState(false);
