@@ -16,7 +16,7 @@
 }
 
 #swiper >.slide {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: white;
   padding: 60px 10px;
   padding-bottom: 40px;

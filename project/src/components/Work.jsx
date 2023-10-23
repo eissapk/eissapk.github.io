@@ -2,7 +2,7 @@ import "./Work.css";
 import Carousel from "./Carousel";
 import { useEffect, useState } from "react";
 
-export default function Work({ counter, index, setCounter }) {
+export default function Work({ counter, index, setCounter, winHeight }) {
   const [render, setRender] = useState(false);
   useEffect(() => {
     if (counter == index && !render) {
@@ -11,5 +11,5 @@ export default function Work({ counter, index, setCounter }) {
     }
   }, [counter]);
 
-  return <div className="slide work">{render && <Carousel setCounter={setCounter} counter={counter} />}</div>;
+  return <div className="slide work"  style={{height: winHeight + "px"}}>{render && <Carousel setCounter={setCounter} counter={counter} />}</div>;
 }
